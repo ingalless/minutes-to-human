@@ -6,13 +6,13 @@ export default function Home() {
   const [minutes, setMinutes] = useState(0);
   const pretty = HumanizeDuration(minutes * 60000);
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-50 dark:bg-[#364954]">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-50 dark:bg-[#364954] overflow-hidden">
       <Head>
         <title>Minutes Formatter</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center flex-1 px-20 text-center dark:text-gray-100">
+      <main className="flex flex-col items-center justify-center flex-1 text-center dark:text-gray-100">
         <input
           onChange={(e) => setMinutes(e.target.value)}
           type="text"
